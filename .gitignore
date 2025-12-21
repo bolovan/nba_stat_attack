@@ -1,0 +1,33 @@
+# Save files - don't upload user data
+game_save.json
+
+# Analysis and utility scripts - keep local only
+analyze_labels.py
+download_nba_advanced.py
+download_nba_data.py
+nba_data - API Calls.py
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Virtual environment - NEVER upload
+venv/
+env/
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+
+#folder
+nba_stat_attack/
+
+#starter packs
+starter_packs.json

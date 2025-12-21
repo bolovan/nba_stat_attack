@@ -1,0 +1,15 @@
+[theme]
+# NBA-inspired color scheme
+primaryColor = "#C9082A"              # NBA Red (buttons, links, accents)
+backgroundColor = "#0E1117"           # Dark background
+secondaryBackgroundColor = "#1E2530"  # Sidebar and card backgrounds
+textColor = "#FFFFFF"                 # White text
+font = "sans serif"
+
+[server]
+# Max upload size in MB (for save files)
+maxUploadSize = 5
+
+[browser]
+# Tab title and favicon are set in app.py via st.set_page_config()
+gatherUsageStats = false
