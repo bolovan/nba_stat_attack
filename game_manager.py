@@ -59,17 +59,23 @@ class GameManager:
 
     # --- SAVE SYSTEM ---
     def load_game(self):
+        """Load game from session state (browser-based, per-user)"""
         try:
-            with open(self.save_file, 'r') as f:
-                loaded = json.load(f)
-                self.game_state.update(loaded)
+            import streamlit as st
+            if 'saved_game_data' in st.session_state:
+                self.game_state.update(st.session_state['saved_game_data'])
                 return True
+            return False
         except Exception:
             return False
 
     def save_game(self):
-        with open(self.save_file, 'w') as f:
-            json.dump(self.game_state, f, indent=2)
+        """Save game to session state (browser-based, per-user)"""
+        try:
+            import streamlit as st
+            st.session_state['saved_game_data'] = self.game_state.copy()
+        except Exception:
+            pass
 
     def verify_and_repair_save(self):
         """Repair metadata for tapes"""

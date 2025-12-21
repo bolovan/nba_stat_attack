@@ -212,16 +212,11 @@ elif choice == 'settings':
         
     st.divider()
     with st.expander("Danger Zone"):
-        st.warning("Note: This deletes your current session progress. If you are online, your local save file is safe unless you overwrite it.")
+        st.warning("This will reset your current game progress. You can restore it by uploading a previously downloaded save file.")
         if st.button("🗑️ Reset Session (New Game)", type="primary"):
-            # 1. Delete physical file (if it exists)
-            if os.path.exists('game_save.json'):
-                try:
-                    os.remove('game_save.json')
-                except Exception as e:
-                    st.error(f"Error deleting file: {e}")
-            
-            # 2. Clear session state
+            # Clear all game-related session state
+            if 'saved_game_data' in st.session_state:
+                del st.session_state['saved_game_data']
             if 'game_manager' in st.session_state:
                 del st.session_state['game_manager']
                 
