@@ -10,9 +10,9 @@ A turn-based RPG battle game that transforms real NBA player statistics into str
 
 NBA Stat Attack converts real NBA game data into an engaging combat system:
 
-- **Players** are fighters with base stats derived from their season averages
-- **Gametapes** are equipment that modify stats based on specific real-life games
-- **Labels** are special bonuses earned from historic performances (Triple Double, Microwave, etc.)
+- **Players** are fighters with base stats derived from their season averages. All players selected randomly. Starting from 2016-2017 season to 2024-2025 season.
+- **Gametapes** are equipment that modify stats based on specific real-life box score stats from games.
+- **Labels** are special bonuses earned from strong performances (Triple Double, Microwave, etc.)
 
 ## ⚔️ Battle System
 
@@ -60,7 +60,7 @@ Gametapes can earn powerful labels based on performance:
 | Floor General | 6+ AST, 3+ AST/TO ratio | Assists grant 2x buff stacks |
 | Rim Protector | 2+ BLK, 8+ DREB | Blocks debuff 2x |
 | Bruiser | 4+ screen assists | +30 Max HP |
-| 3 and D | Catch-and-shoot specialist | Removes 2 misses from movelist |
+| 3 and D | >2 fg3m, assisted, low usage | Removes 2 misses from movelist |
 | Glue Guy | +10 +/-, 3+ AST, ≤15 PTS | Adds 4 bonus free throws |
 
 ## 💰 Economy
