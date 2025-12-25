@@ -473,7 +473,7 @@ class Battle5v5:
         input("Press Enter to begin Overtime...")
         
         # Create interactive battle instance
-        # Note: We pass the existing objects so HP/Deck state is preserved!
+        
         ot_battle = Battle(p1, p2)
         result = ot_battle.execute_battle()
         

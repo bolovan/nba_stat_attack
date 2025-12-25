@@ -97,7 +97,6 @@ class GameManager:
                         target_game = next((g for g in games if str(g['game_id']) == str(game_id)), None)
                         
                         if target_game and stats:
-                            # FIX: Calculate labels during repair so they appear
                             labels = self.nba_manager.detect_gametape_labels_offline(pid, game_id, target_game)
                             name = self.create_gametape_display_name(target_game, stats, labels)
                             self.game_state['gametape_metadata'][tape_id] = name

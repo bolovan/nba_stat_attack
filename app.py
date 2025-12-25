@@ -161,7 +161,8 @@ if choice == 'main':
 
     with col2:
         st.write("### Welcome to version 2.2.0")
-        st.info("Use the sidebar on the left to navigate.")
+        st.info("Use the sidebar on the left to navigate. Upper left arrow on mobile.")
+        st.info("Save game in sidebar to not lose progress.")
         st.markdown(f"""
         **Status:**
         * **Tokens:** {state.get('tokens', 0)}
